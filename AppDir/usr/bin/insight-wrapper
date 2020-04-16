@@ -2,8 +2,8 @@
 export PATH=$PATH:$(pwd)/bin
 if [ $# -eq 0 ]
     then
-        insight
+        arm-none-eabi-insight
         exit
 fi 
-insight $*
+arm-none-eabi-insight $*
 exit

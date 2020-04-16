@@ -11,6 +11,7 @@ cd insight/
 autoconf
 chmod +x configure
 ./configure	--prefix=/usr/.						\
+		--target=arm-none-eabi					\
 		--disable-binutils					\
 		--disable-elfcpp					\
 		--disable-gas						\
@@ -21,7 +22,6 @@ chmod +x configure
 		--disable-zlib						\
 		--without-libunwind					\
 		--without-isl
-		--target=arm-none-eabi
 
 make -j$(nproc)
 make DESTDIR=$install_dir install -j$(nproc)
